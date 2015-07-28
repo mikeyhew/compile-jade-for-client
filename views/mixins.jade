@@ -1,0 +1,10 @@
+//- the "stars" mixin creates a group of 5 stars for reviews
+mixin stars
+  ul.stars(role='radiogroup')&attributes(attributes)
+    each star_number in [1,2,3,4,5]
+      li.star.star-empty(data-star-number=star_number)
+
+mixin mymixin(arg1, arg2)
+  div.myclass
+    h1 arg1
+    p arg2
